@@ -20,6 +20,8 @@ def main(context: Context):
     mycursor = mydb.cursor()
     mycursor.execute("INSERT INTO VISITOR_LOG (V_TIME) VALUES (curdate())")
 
+    mydb.commit()
+
     mycursor.execute("SELECT COUNT(1) FROM VISITOR_LOG")
 
     rowcount = mycursor.fetchone()[0]
