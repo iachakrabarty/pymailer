@@ -1,0 +1,21 @@
+version: 0.19.0
+name: kn
+namespace: ""
+runtime: python
+registry: ""
+image: docker.io/achakrabarty22/pymailer:latest
+imageDigest: sha256:078227ba8c4475e779e49a1444009f80fdf8ff91485153a42a7e5cabc08450dd
+builder: quay.io/boson/faas-python-builder:v0.8.4
+builders:
+  default: quay.io/boson/faas-python-builder:v0.8.4
+buildpacks: []
+volumes: []
+buildEnvs: []
+envs: []
+annotations: {}
+options: {}
+labels: []
+healthEndpoints:
+  liveness: /health/liveness
+  readiness: /health/readiness
+created: 2022-02-17T19:00:37.5589407+05:30
